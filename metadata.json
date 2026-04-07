@@ -1,0 +1,5 @@
+{
+  "name": "Fit Tracker",
+  "description": "A minimal, habit-focused fitness tracker with streak tracking, progress photos, and daily reminders.",
+  "requestFramePermissions": ["camera", "microphone"]
+}

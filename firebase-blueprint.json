@@ -1,0 +1,57 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile and fitness settings",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phoneNumber": { "type": "string" },
+        "weight": { "type": "number", "description": "Current weight in kg" },
+        "height": { "type": "number", "description": "Height in cm" },
+        "goal": { "type": "string" },
+        "streak": { "type": "integer", "description": "Current daily habit streak" },
+        "lastCheckIn": { "type": "string", "format": "date-time", "description": "ISO date of last check-in" },
+        "reminderTime": { "type": "string", "description": "Preferred reminder time (HH:mm)" }
+      },
+      "required": ["uid"]
+    },
+    "CheckIn": {
+      "title": "CheckIn",
+      "description": "Daily habit check-in record",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "date": { "type": "string", "format": "date", "description": "YYYY-MM-DD" },
+        "completed": { "type": "boolean" }
+      },
+      "required": ["userId", "date", "completed"]
+    },
+    "ProgressPhoto": {
+      "title": "ProgressPhoto",
+      "description": "User progress photo upload",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "date": { "type": "string", "format": "date-time" },
+        "photoUrl": { "type": "string", "format": "uri" }
+      },
+      "required": ["userId", "date", "photoUrl"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile data"
+    },
+    "/users/{userId}/checkins/{date}": {
+      "schema": "CheckIn",
+      "description": "Daily check-ins for a user"
+    },
+    "/users/{userId}/progressPhotos/{photoId}": {
+      "schema": "ProgressPhoto",
+      "description": "Progress photos for a user"
+    }
+  }
+}
