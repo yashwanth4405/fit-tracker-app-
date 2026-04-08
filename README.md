@@ -1,20 +1,37 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚀 Fit Tracker App
 
-# Run and deploy your AI Studio app
+A modern habit tracking web app to help users build consistency and improve productivity.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/7bc0260d-658f-4c97-b59d-457fcf5bbced
+## 🔗 Live Demo
+👉 https://yashwanth4405.github.io/fit-tracker-app-/
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
+- ⚛️ React
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🟦 TypeScript
 
+---
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## ✨ Features
+- ✅ Track daily habits
+- 📊 Simple progress UI
+- ⚡ Fast and responsive design
+- 🧠 Clean user experience
+
+---
+
+## 📸 Preview
+(Add screenshots here later)
+
+---
+
+## 🚀 Run Locally
+
+```bash
+npm install
+npm run dev
